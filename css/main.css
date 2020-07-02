@@ -2178,7 +2178,7 @@ ul.breadcrumb li + li:last-child {
   padding-bottom: 60px;
 }
 .content {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 @media (max-width: 767px) {
   .content {
