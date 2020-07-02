@@ -49,7 +49,16 @@
     filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
   }
   body {
-    background: radial-gradient(#232322, #1b1a1a) !important;
+    background: #1e1e1e !important;
+  }
+  .highlight,
+  pre {
+    background: #191919 !important;
+    color: #c8c8c8 !important;
+  }
+  pre,
+  pre code {
+    color: #c8c8c8 !important;
   }
 }
 html {
@@ -211,7 +220,7 @@ body {
 body {
   background: var(--body-bg-color);
   color: var(--text-color);
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Nexa', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1em;
   line-height: 2;
 }
@@ -227,7 +236,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Nexa', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -1019,7 +1028,7 @@ pre .javascript .function {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Nexa', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   margin: 0;
@@ -1521,7 +1530,7 @@ pre .javascript .function {
   top: 0;
 }
 .post-body {
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Nexa', "PingFang SC", "Microsoft YaHei", sans-serif;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -1819,7 +1828,7 @@ pre .javascript .function {
 }
 .posts-expand .post-meta {
   color: #999;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Nexa', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.75em;
   margin: 3px 0 60px 0;
   text-align: center;
@@ -2193,7 +2202,7 @@ embed {
 .custom-logo-image {
   margin: 0 auto;
   max-width: 150px;
-  padding: 5px;
+  padding: 3px;
 }
 .brand {
   background: var(--btn-default-bg);
@@ -2296,4 +2305,13 @@ embed {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+@font-face {
+  font-family: 'Nexa';
+  src: url("/fonts/nexa-book.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'PingFang';
+  src: url("/fonts/PingFangSC-Regular.woff2") format('woff2');
+  src: url("/fonts/PingFangSC-Regular.ttf") format('truetype');
 }
