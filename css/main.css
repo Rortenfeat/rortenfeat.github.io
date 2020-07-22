@@ -60,6 +60,23 @@
   pre code {
     color: #c8c8c8 !important;
   }
+  .posts-collapse .collection-title::before {
+    background: #323232 !important;
+    border: 1px solid #424242 !important;
+  }
+  .posts-collapse::before {
+    background: #424242 !important;
+  }
+  .posts-collapse .collection-year::before {
+    background: #323232 !important;
+  }
+  .posts-collapse .post-header::before {
+    background: #323232 !important;
+    border: 1px solid #424242 !important;
+  }
+  .posts-collapse .post-header {
+    border-bottom: 1px dashed #323232 !important;
+  }
 }
 html {
   line-height: 1.15; /* 1 */
@@ -1696,9 +1713,6 @@ pre .javascript .function {
 .post-block:last-of-type .post-eof {
   display: none;
 }
-.content {
-  padding-top: 40px;
-}
 @media (min-width: 992px) {
   .post-body {
     text-align: justify;
@@ -2178,11 +2192,11 @@ ul.breadcrumb li + li:last-child {
   padding-bottom: 60px;
 }
 .content {
-  padding-top: 20px;
+  padding-top: 40px;
 }
 @media (max-width: 767px) {
   .content {
-    padding-top: 20px;
+    padding-top: 30px;
   }
 }
 embed {
