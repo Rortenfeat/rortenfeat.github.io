@@ -46,75 +46,118 @@
 			}
 		</script>
 		<style>
+			* {
+				box-sizing: border-box;
+			}
 			html, body {
+				font-size: 80px;
 				width: 100%;
 				height: 100%;
+				margin: 0;
+				padding: 0;
 				overflow: hidden;
-				background-color: rgb(248, 241, 232);
+				background-color: #F2F2F2;
 			}
-			form#before {
+			body ::selection {
+				background-color: #1aabff;
+				color: #F2F2F2;
+			}
+			#board {
+				display: block;
+				position: relative;
+				width: 12.25rem;
+				height: 100%;
+				margin: 0 auto;
+				padding: 0;
+				background-color: #e0e0e0;
+			}
+			#before {
 				display: flex;
 			}
 			form {
-				height: 85%;
-				padding: 50px;
+				width: 100%;
+				height: 100%;
+				padding: 1rem;
 				flex-direction: column;
 				justify-content: center;
 			}
-			div {
-				display: flex;
-				margin: 20px;
+			.a, .b, .c, .d  {
+				margin: 25px;
 			}
-			div.a {
+			.a {
 				height: 100px;
-				flex-grow: 3;
+				flex-grow: 4;
 			}
-			div.b {
+			.b {
 				height: 40px;
 				flex-grow: 1;
 				flex-shrink: 0;
 			}
-			div.c, div.d {
+			.c, .d {
 				height: 70px;
 				flex-grow: 1;
 			}
-			div.d {
+			.d {
+				display: flex;
 				flex-direction: row;
 				justify-content: center;
-				background-color: rgb(238, 229, 219);
+				align-items: center;
+				background-color: #F2F2F2;
+				border-radius: 20px;
 			}
 			button, textarea {
 				display: inline-block;
 				width: 100%;
+				height: 100%;
 				vertical-align: center;
-				font-size: 4vw;
-				background-color: rgb(238, 229, 219);
+				font-size: 0.6rem;
+				border: 5px solid #424242;
+				border-radius: 20px;
+				color: #424242;
+				background-color: #F2F2F2;
+			}
+			button:hover, textarea:focus {
+				border-color: #1aabff;
+			}
+			button:focus, textarea:focus {
+				outline: none;
+			}
+			button:hover {
+				color: #F2F2F2;
+				background-color: #1aabff;
 			}
 			textarea {
+				padding: 0.3rem 0.5rem;
 				text-align: left;
 				resize: none;
 			}
 			button {
 				text-align: center;
 			}
+			img {
+				max-width: 95%;
+				max-height: 95%;
+			}
 		</style>
 	</head>
 	<body>
-		<form id='before'>
-			<div class='a'>
-				<textarea id='url' placeholder='在这里粘贴链接……'></textarea>
-			</div>
-			<div class='b'>
-				<button id='submit'>解析</button>
-			</div>
-		</form>
-		<form id='after' style='display: none;'>
-			<div class='c'>
-				<textarea id='desc' placeholder='这里是解析的文案……'></textarea>
-			</div>
-			<div class='d'>
-				<img id='cover'/>
-			</div>
-		</form>
+		<div id='board'>
+			<form id='before'>
+				<div class='a'>
+					<textarea id='url' placeholder='在这里粘贴链接……' spellcheck='false'></textarea>
+				</div>
+				<div class='b'>
+					<button id='submit'>解析</button>
+				</div>
+			</form>
+			<form id='after' style='display: none;'>
+				<div class='c'>
+					<textarea id='desc' placeholder='这里是解析的文案……' spellcheck='false'></textarea>
+				</div>
+				<div class='d'>
+					<img id='cover'/>
+				</div>
+			</form>
+		</div>
 	</body>
 </html>
