@@ -31,7 +31,7 @@
 					}
 				}
 				submit.onclick = ()=>{
-					let rule = /(?:https?:\/\/)?(?:(?:xhslink\.com\/[a-zA-Z0-9]+)|(?:(?:www\.)?xiaohongshu\.com\/discovery\/item\/[0-9a-zA-Z=-_&\?]+))/i;
+					let rule = /(?:https?:\/\/)?(?:(?:xhslink\.com\/[a-zA-Z0-9]+)|(?:(?:www\.)?xiaohongshu\.com\/discovery\/item\/[0-9a-zA-Z]+))/i;
 					let input = document.getElementById('url').value;
 					if ( rule.exec(input) !== null ) {
 						let url = rule.exec(input);
